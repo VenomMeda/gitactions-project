@@ -1,5 +1,4 @@
 FROM openjdk:8
 EXPOSE 8080
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+ADD target/springboot-project-bennett.jar springboot-project-bennett.jar
+ENTRYPOINT ["java","-jar","/springboot-project-bennett.jar"]
